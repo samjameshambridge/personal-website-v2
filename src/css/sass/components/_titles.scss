@@ -1,0 +1,16 @@
+.secondary-page-main-title {
+  display: inline-block;
+  left: 20vw;
+  margin-top: 0;
+  position: relative;
+
+  @media (orientation: portrait) and (max-width: $medium) {
+    display: block;
+    left: 0;
+    top: 10vh;
+  }
+
+  @media screen and (min-width: $large) {
+    font-size: 2.5rem;
+  }
+}

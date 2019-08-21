@@ -1,26 +1,81 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "css/App.css";
+
+import Contact from "components/pages/Contact";
+import Home from "components/pages/Home";
+import Navbar from "components/navigation/Navbar";
+import NotFound from "components/pages/NotFound";
+import SpecificProjectPage from "components/pages/SpecificProjectPage";
+import Projects from "components/pages/Projects";
+import Skills from "components/pages/Skills";
+
+class App extends Component {
+  componentDidMount() {
+    window.addEventListener("resize", () => {
+      this.forceUpdate();
+    });
+  }
+
+  render() {
+    if ((window.innerWidth > window.innerHeight) & (window.innerWidth > 768)) {
+      return (
+        <Router>
+          <Navbar />
+          <Route
+            render={({ location }) => (
+              <TransitionGroup component={null}>
+                <CSSTransition
+                  key={location.key}
+                  timeout={1000}
+                  classNames="transition"
+                  appear
+                >
+                  <Switch location={location}>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/skills" component={Skills} />
+                    <Route exact path="/projects" component={Projects} />
+                    <Route
+                      exact
+                      path="/projects/orinda-books"
+                      component={SpecificProjectPage}
+                    />
+                    <Route
+                      exact
+                      path="/projects/granite-city"
+                      component={SpecificProjectPage}
+                    />
+                    <Route
+                      exact
+                      path="/projects/lotus"
+                      component={SpecificProjectPage}
+                    />
+                    <Route exact path="/contact" component={Contact} />
+                    <Route component={NotFound} />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            )}
+          />
+        </Router>
+      );
+    } else {
+      return (
+        <Router>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/skills" component={Skills} />
+            <Route exact path="/projects" component={Projects} />
+            <Route exact path="/contact" component={Contact} />
+            <Route component={NotFound} />
+          </Switch>
+        </Router>
+      );
+    }
+  }
 }
 
 export default App;

@@ -1,0 +1,276 @@
+.projects-content-container {
+  @include displayFlex(center, space-evenly);
+  height: 100%;
+
+  @media (orientation: portrait) and (max-width: $medium) {
+    @include displayFlex(center, center, column nowrap);
+  }
+
+  .projects-left-side-container {
+    height: 50vh;
+    left: 2.5vh;
+    position: relative;
+    top: -5vh;
+    transition: all 1s ease;
+    width: 33vw;
+
+    @media (orientation: portrait) and (max-width: $medium) {
+      max-height: 25vh;
+      left: 0;
+      order: 2;
+      top: 0;
+      width: 90vw;
+    }
+
+    .yellow-box-background {
+      background: $theme-yellow;
+      box-shadow: $main-shadow;
+      height: 50vh;
+      left: -2vw;
+      position: absolute;
+      top: 2vw;
+      width: 33vw;
+      z-index: -1;
+
+      @media (orientation: portrait) and (max-width: $medium) {
+        display: none;
+      }
+    }
+
+    .projects-info-container {
+      @include displayFlex(center, space-between, column nowrap);
+
+      box-shadow: $light-shadow;
+      background: $theme-grey;
+      height: 50vh;
+      position: absolute;
+      width: 33vw;
+      z-index: 10;
+
+      @media (orientation: portrait) and (max-width: $medium) {
+        max-height: 25vh;
+        width: 100%;
+      }
+
+      .projects-specific-secondary-title {
+        font-size: 2rem;
+        display: inline-block;
+        margin-bottom: 0;
+        width: 100%;
+      }
+
+      p {
+        text-align: center;
+        width: 75%;
+      }
+
+      .project-info-description {
+        @media (orientation: portrait) and (max-width: $medium) {
+          display: none;
+        }
+      }
+
+      .project-info-github-link {
+        display: none;
+
+        @media (orientation: portrait) and (max-width: $medium) {
+          display: block;
+          font-size: 0.8rem;
+          margin-bottom: 1rem;
+          text-decoration: underline;
+        }
+
+        @media (orientation: portrait) and (max-width: $medium) {
+          font-size: 0.7rem;
+        }
+      }
+
+      .projects-learn-more-button {
+        margin-bottom: 2rem;
+
+        @media (orientation: portrait) and (max-width: $medium) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .projects-right-side-container {
+    @include displayFlex(flex-end, space-evenly, column nowrap);
+    height: 100%;
+    left: 6vw;
+    position: relative;
+    top: -5vh;
+    width: 50%;
+
+    @media (orientation: portrait) and (max-width: $medium) {
+      height: 50%;
+      left: 0;
+      top: -2.5vh;
+      width: 100%;
+    }
+
+    .project-bar {
+      @include displayFlex(center, space-between);
+      background: $theme-grey;
+      height: 10vh;
+      position: relative;
+      transition: left 1s ease;
+      width: 90%;
+
+      @media (orientation: portrait) and (max-width: $medium) {
+        @include displayFlex(center, space-evenly);
+        height: 8vh;
+        width: 100%;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .laptop-mockup,
+      .mobile-mockup {
+        max-height: 7.5vh;
+      }
+
+      .mobile-mockup {
+        @media (orientation: portrait) and (max-width: $medium) {
+          display: none;
+        }
+      }
+
+      .project-bar-button-group {
+        @include displayFlex(center, space-between);
+        height: 100%;
+        position: relative;
+        right: 5%;
+
+        @media screen and (max-width: $large) {
+          right: 10%;
+        }
+
+        @media (orientation: portrait) and (max-width: $medium) {
+          display: none;
+          right: 0;
+        }
+
+        a {
+          margin: 0 1rem;
+
+          @media (orientation: portrait) and (max-width: $medium) {
+            margin: 0;
+            padding: 0.33rem 2rem;
+          }
+        }
+
+        .projects-github-button {
+          @media (orientation: portrait) and (max-width: $medium) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .project-bar.active-bar {
+      @include displayFlex(center, flex-start);
+      background: none;
+      border-top: 20vh solid $theme-cyan;
+      border-left: 17.5vh solid transparent;
+      height: 0;
+      width: 100%;
+      z-index: -10;
+
+      @media (orientation: portrait) and (max-width: $medium) {
+        @include displayFlex(center, center);
+        background: $theme-cyan;
+        border: none;
+        height: 15vh;
+      }
+
+      .project-bar-mockup-group,
+      .project-bar-button-group {
+        position: relative;
+        top: -10vh;
+
+        @media (orientation: portrait) and (max-width: $medium) {
+          top: 0;
+        }
+      }
+
+      .project-bar-mockup-group {
+        right: 5vw;
+      }
+
+      .project-bar-button-group {
+        @include displayFlex(center, space-between, column nowrap);
+        height: 25vh;
+        margin-left: 2rem;
+
+        @media (orientation: portrait) and (max-width: $medium) {
+          height: auto;
+          margin-left: 0;
+        }
+      }
+
+      .laptop-mockup,
+      .mobile-mockup {
+        max-height: 25vh;
+
+        @media screen and (max-width: $x-large) {
+          max-height: 20vh;
+        }
+
+        @media (orientation: landscape) and (max-width: $large) {
+          max-height: 15vh;
+        }
+
+        @media (orientation: portrait) and (max-width: $medium) {
+          max-height: 15vh;
+        }
+      }
+    }
+  }
+}
+
+// animatable styling
+@media (orientation: landscape) and (min-width: $medium) {
+  .projects-container-full-page {
+    .projects-left-side-container {
+      transform: scale(0);
+    }
+
+    .project-bar {
+      left: 65vw;
+    }
+  }
+}
+
+.projects-container-full-page.transition-enter {
+  .projects-left-side-container {
+    transform: scale(0);
+  }
+
+  .project-bar {
+    left: 65vw;
+  }
+}
+
+.projects-container-full-page.transition-enter-done {
+  .projects-left-side-container {
+    transform: scale(1);
+  }
+
+  .project-bar {
+    left: 0vw;
+  }
+}
+
+.projects-container-full-page.transition-exit {
+  .projects-left-side-container {
+    transform: scale(0);
+  }
+
+  .project-bar {
+    left: 65vw;
+  }
+}

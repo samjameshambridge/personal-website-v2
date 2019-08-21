@@ -1,0 +1,18 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./abstracts/general-animations";
+
+@import "./base/reset";
+@import "./base/typography";
+
+@import "./components/buttons";
+@import "./components/containers";
+@import "./components/navigation";
+@import "./components/titles";
+
+@import "./pages/contact";
+@import "./pages/home";
+@import "./pages/not-found";
+@import "./pages/projects";
+@import "./pages/skills";
+@import "./pages/specific-project-page";

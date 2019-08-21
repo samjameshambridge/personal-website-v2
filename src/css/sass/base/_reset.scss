@@ -1,0 +1,56 @@
+body {
+  box-sizing: border-box;
+  color: $theme-blue;
+  font-family: "Josefin Sans";
+  font-size: 16px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+
+  a {
+    color: $theme-blue;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  button {
+    font-weight: 550;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  h1,
+  h3 {
+    font-weight: normal;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: "Rock Salt";
+  }
+
+  i {
+    -webkit-tap-highlight-color: transparent;
+
+    // cross browser no select
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

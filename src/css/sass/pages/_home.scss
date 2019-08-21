@@ -1,0 +1,190 @@
+.home-container {
+  @include displayFlex(center, flex-start);
+
+  .home-right-side-container {
+    height: 100vh;
+    left: 50vw;
+    position: absolute;
+
+    @media (orientation: portrait) {
+      height: 50vh;
+      left: 0;
+      top: 0;
+    }
+
+    .home-titles-container {
+      height: 50vh;
+      margin-top: 20vh;
+      z-index: 1;
+
+      @include displayFlex(stretch, flex-start, column nowrap);
+
+      @media screen and (orientation: portrait) {
+        height: 33vh;
+        margin-top: 20vh;
+        width: 100vw;
+      }
+
+      @media screen and (max-width: $medium) {
+        height: 25vh;
+      }
+
+      @media (orientation: landscape) and (min-width: $xx-large) {
+        height: 40vh;
+      }
+
+      .home-main-title {
+        font-size: 2.5rem;
+
+        @media screen and (max-width: $small) {
+          font-size: 1.75rem;
+        }
+
+        @media screen and (max-width: $medium) {
+          font-size: 2rem;
+        }
+      }
+
+      .home-titles-secondary-group {
+        margin-top: auto;
+
+        .home-titles-developer {
+          font-size: 2rem;
+
+          @media screen and (max-width: $small) {
+            font-size: 1.75rem;
+          }
+        }
+
+        .home-titles-github {
+          @media (max-width: $medium) and (orientation: portrait) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .home-img-container {
+    @include displayFlex(flex-end, flex-start);
+    align-self: flex-end;
+    height: 65vh;
+    position: relative;
+    left: 10vw;
+
+    @media (orientation: portrait) {
+      height: 40vh;
+      left: 12.5vw;
+      width: 75vw;
+
+      @include displayFlex(flex-start, center);
+    }
+
+    @media (max-width: $small) and (orientation: portrait) {
+      left: 0;
+      width: 100vw;
+    }
+
+    @media (orientation: landscape) and (min-width: $xx-large) {
+      width: 40vw;
+    }
+
+    .home-profile-picture {
+      align-self: flex-end;
+      max-height: 100%;
+      z-index: 1;
+
+      @media (orientation: portrait) {
+        max-height: 100%;
+        max-width: 100%;
+      }
+
+      @media (orientation: landscape) and (min-width: $xx-large) {
+        max-height: inherit;
+        min-width: 75%;
+      }
+    }
+
+    .home-blue-rectangle {
+      box-shadow: $light-shadow;
+      display: none;
+
+      @media (orientation: portrait) {
+        background: $theme-cyan;
+        display: block;
+        height: 39vh;
+        left: 37.5vw;
+        position: absolute;
+        top: 1vh;
+        width: 25vw;
+        z-index: -1;
+      }
+
+      @media (max-width: $small) and (orientation: portrait) {
+        left: 50vw;
+      }
+    }
+
+    .home-yellow-trapezoid {
+      border-bottom: 30vw solid $theme-yellow;
+      box-shadow: $light-shadow;
+      height: 0;
+      position: absolute;
+      transform: rotate(-70deg);
+      width: 55vw;
+      z-index: -1;
+
+      @media (orientation: portrait) {
+        background: $theme-yellow;
+        border-bottom: none;
+        border-right: none;
+        height: 45vh;
+        left: 12.5vw;
+        top: -2.5vh;
+        transform: rotate(0deg);
+        width: 25vw;
+      }
+
+      @media (max-width: $small) and (orientation: portrait) {
+        left: 25vw;
+      }
+
+      @media (min-width: $medium) and (orientation: landscape) {
+        left: -15vw;
+        top: 25vh;
+      }
+    }
+  }
+}
+
+// // animations styling
+@media (orientation: landscape) and (min-width: $medium) {
+  .home-container {
+    .home-profile-picture,
+    .home-yellow-trapezoid {
+      opacity: 1;
+      transition: all 1s ease;
+    }
+  }
+}
+
+.home-container.transition-enter {
+  .home-profile-picture,
+  .home-yellow-trapezoid {
+    opacity: 0;
+  }
+}
+
+.home-container.transition-enter-done {
+  .home-profile-picture,
+  .home-yellow-trapezoid {
+    opacity: 1;
+  }
+}
+
+.home-container.transition-exit {
+  .home-profile-picture,
+  .home-yellow-trapezoid {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,42 @@
+// =========== this stylesheet contains all animation styling that is reused =========== //
+
+// secondary page title animations
+@media screen and (min-width: $medium) {
+  .secondary-page-main-title {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  .primary-title,
+  .home-titles-developer,
+  .home-titles-github {
+    transition: opacity 1s ease;
+  }
+
+  .full-page-container.transition-enter {
+    .secondary-page-main-title,
+    .primary-title,
+    .home-titles-developer,
+    .home-titles-github {
+      opacity: 0;
+    }
+  }
+
+  .full-page-container.transition-enter-done {
+    .secondary-page-main-title,
+    .primary-title,
+    .home-titles-developer,
+    .home-titles-github {
+      opacity: 1;
+    }
+  }
+
+  .full-page-container.transition-exit {
+    .secondary-page-main-title,
+    .primary-title,
+    .home-titles-developer,
+    .home-titles-github {
+      opacity: 0;
+    }
+  }
+}

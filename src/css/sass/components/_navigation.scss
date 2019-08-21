@@ -1,0 +1,82 @@
+// navigation bar that is on all pages exc
+.navigation-nav {
+  left: 50vw;
+  position: relative;
+  z-index: 10;
+
+  @media screen and (orientation: portrait) {
+    padding-top: 2.5vh;
+
+    @include displayFlex(center, flex-start, column nowrap);
+  }
+
+  @media (max-width: $medium) and (orientation: portrait) {
+    left: 0;
+  }
+
+  .fa-bars {
+    display: none;
+    text-align: center;
+    min-width: 10vw;
+
+    @media (max-width: $medium) and (orientation: portrait) {
+      display: block;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .navigation-ul {
+    font-size: 1.2rem;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+    width: 100%;
+
+    @media (max-width: $medium) and (orientation: portrait) {
+      @include displayFlex(center, center, column nowrap);
+
+      background: $theme-white;
+      display: none;
+      opacity: 0;
+      padding-top: 1rem;
+      position: absolute;
+      top: 60%;
+      transition: all 0.5s ease;
+      z-index: 10;
+    }
+
+    @media screen and (min-width: $xx-large) {
+      font-size: 1.75rem;
+    }
+
+    li {
+      display: inline;
+      margin: 0 1.5em;
+
+      @media (max-width: $medium) and (orientation: portrait) {
+        display: block;
+        margin: 0.25rem 0;
+      }
+
+      a {
+        border-top: none;
+        padding: 5px 0;
+        transition: all 0.1s ease-in;
+
+        &:hover {
+          cursor: pointer;
+          border-top: solid $theme-blue 3px;
+          margin-bottom: -5px;
+
+          @media screen and (orientation: portrait) {
+            border-top: none;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

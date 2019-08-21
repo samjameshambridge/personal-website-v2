@@ -1,0 +1,246 @@
+.top-half-container {
+  @media (orientation: portrait) and (max-width: $medium) {
+    position: relative;
+    top: 10vh;
+  }
+
+  .skills-img-content-container {
+    @media (orientation: portrait) and (max-width: $medium) {
+      @include displayFlex(center, flex-start, column nowrap);
+    }
+
+    .skills-img-set {
+      display: grid;
+      grid-template-columns: repeat(4, 12vw);
+      grid-gap: 2.5vw;
+      position: relative;
+      left: 20vw;
+      top: 7.5vh;
+
+      @media (orientation: portrait) and (max-width: $medium) {
+        grid-template-columns: repeat(3, 20vw);
+        grid-gap: 7.5vw;
+        left: 0;
+        top: 5vh;
+      }
+
+      .skill-img {
+        border-radius: 50%;
+        box-shadow: $main-shadow;
+        max-height: 15vh;
+
+        @media screen and (max-width: $medium) {
+          max-height: 12.5vh;
+        }
+
+        @media screen and (max-width: $small) {
+          max-height: 10vh;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .skill-img.active {
+        transform: scale(1.25);
+      }
+
+      #react-widget {
+        background: $theme-white;
+      }
+
+      #css-widget,
+      #html-widget {
+        @media screen and (max-width: $medium) {
+          display: none;
+        }
+      }
+    }
+
+    .skills-trapezoids-set {
+      position: relative;
+
+      .skills-yellow-trapezoid {
+        border-bottom: 10vw solid $theme-yellow;
+        border-right: 25vw solid transparent;
+        position: fixed;
+        transform: rotateX(180deg);
+        top: 30vh;
+        width: 60vw;
+        z-index: -1;
+
+        @media (orientation: portrait) and (max-width: $medium) {
+          border-bottom: 25vw solid $theme-yellow;
+          border-right: 35vw solid transparent;
+          left: 0;
+        }
+      }
+
+      .skills-blue-trapezoid {
+        border-bottom: 10vw solid $theme-cyan;
+        border-left: 25vw solid transparent;
+        position: fixed;
+        transform: rotateX(180deg);
+        top: 45vh;
+        width: 60vw;
+        z-index: -1;
+
+        @media (orientation: portrait) and (max-width: $medium) {
+          border-bottom: 25vw solid $theme-cyan;
+          border-left: 35vw solid transparent;
+          left: 5vw;
+          top: 37.5vh;
+        }
+      }
+    }
+  }
+}
+
+.bottom-half-container {
+  position: relative;
+
+  .skills-info-card {
+    @include displayFlex(flex-start, stretch, column nowrap);
+
+    background: $theme-grey;
+    box-shadow: $main-shadow;
+    box-sizing: border-box;
+    left: 5vw;
+    min-height: 22.5vh;
+    padding: 1.5rem;
+    position: absolute;
+    top: 15vh;
+    width: 90vw;
+
+    @media (orientation: portrait) and (max-width: $medium) {
+      @include displayFlex(center, flex-start, column nowrap);
+      height: auto;
+      left: 0;
+      margin-left: 5vw;
+      padding: 1.25rem;
+      top: 25vh;
+      width: 90vw;
+    }
+
+    .skills-card-top-group {
+      @include displayFlex(center, space-between);
+      width: 100%;
+
+      h3 {
+        display: inline-block;
+        font-size: 2rem;
+        margin: 0;
+      }
+
+      .skills-specific-project-link {
+        text-decoration: underline;
+        white-space: nowrap;
+
+        @media (orientation: portrait) and (max-width: $medium) {
+          display: none;
+        }
+      }
+
+      .skills-specific-project-link.display-none {
+        display: none;
+      }
+    }
+
+    .skills-card-bottom-group {
+      margin: 0;
+      width: 100%;
+
+      p {
+        line-height: 150%;
+
+        @media (orientation: portrait) and (max-width: $medium) {
+          font-size: 0.8rem;
+        }
+
+        @media (orientation: landscape) and (min-width: $xx-large) {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+// animations styling
+@media (orientation: landscape) and (min-width: $medium) {
+  .skills-container-full-page {
+    .skills-info-card {
+      opacity: 0;
+      transition: all 1s ease;
+    }
+
+    .skill-img {
+      transform: scale(0);
+      transition: all 0.33s ease;
+    }
+
+    .skills-yellow-trapezoid {
+      left: -100vw;
+      transition: all 1s ease;
+    }
+
+    .skills-blue-trapezoid {
+      left: 100vw;
+      transition: all 1s ease;
+    }
+  }
+}
+
+.skills-container-full-page.transition-enter {
+  .skills-info-card {
+    opacity: 0;
+  }
+
+  .skill-img {
+    transform: scale(0);
+  }
+
+  .skills-yellow-trapezoid {
+    left: -100vw;
+  }
+
+  .skills-blue-trapezoid {
+    left: 100vw;
+  }
+}
+
+.skills-container-full-page.transition-enter-done {
+  .skills-info-card {
+    opacity: 1;
+  }
+
+  .skill-img {
+    transform: scale(1);
+  }
+
+  .skills-yellow-trapezoid {
+    left: 0vw;
+  }
+
+  .skills-blue-trapezoid {
+    left: 15vw;
+  }
+}
+
+.skills-container-full-page.transition-exit {
+  .skills-info-card {
+    opacity: 0;
+  }
+
+  .skill-img {
+    transform: scale(0) !important;
+  }
+
+  .skills-yellow-trapezoid {
+    left: -100vw;
+  }
+
+  .skills-blue-trapezoid {
+    left: 100vw;
+  }
+}

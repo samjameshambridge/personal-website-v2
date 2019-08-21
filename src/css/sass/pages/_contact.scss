@@ -1,0 +1,136 @@
+.contact-content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  height: 100%;
+  width: 100%;
+
+  @media (orientation: portrait) and (max-width: $medium) {
+    @include displayFlex(flex-start, center, column nowrap);
+  }
+
+  .contact-info {
+    align-self: center;
+    background: $theme-yellow;
+    box-shadow: $main-shadow;
+    box-sizing: border-box;
+    height: 45vh;
+    padding: 0 10vw;
+    position: relative;
+    transition: all 1s ease;
+    top: -5vh;
+    width: 90vw;
+
+    @media (orientation: portrait) and (max-width: $medium) {
+      padding: 0;
+      top: 0;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin: 1rem 0;
+      position: relative;
+      top: calc(22.5vh - 2.5rem - 1.5rem);
+
+      @media (orientation: portrait) and (max-width: $medium) {
+        text-align: center;
+      }
+
+      @media screen and (min-width: $large) {
+        font-size: 1.6rem;
+      }
+
+      span {
+        font-size: 1rem;
+        margin-right: 2rem;
+
+        @media (orientation: portrait) and (max-width: $medium) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .social-media-info {
+    @include displayFlex(center, space-around, column nowrap);
+
+    background: $theme-grey;
+    box-shadow: $main-shadow;
+    min-height: 80vh;
+    left: -30vw;
+    position: relative;
+    transition: all 0.5s ease;
+    width: 12.5vw;
+
+    @media (orientation: portrait) and (max-width: $medium) {
+      @include displayFlex(center, space-evenly);
+      left: 5vw;
+      min-height: auto;
+      padding: 2rem 0;
+      top: 5vh;
+      width: 90vw;
+    }
+
+    @media (orientation: landscape) and (max-width: $large) {
+      left: -25vw;
+      width: 15vw;
+    }
+
+    i {
+      color: $theme-blue;
+      transition: transform ease 0.5s;
+
+      @media (orientation: portrait) and (max-width: $medium) {
+        font-size: 3rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.25);
+      }
+    }
+  }
+}
+
+// // animations styling
+@media (orientation: landscape) and (min-width: $medium) {
+  .contact-container-full-page {
+    .contact-info {
+      left: -90vw;
+    }
+
+    .social-media-info {
+      top: 100vh;
+    }
+  }
+}
+
+.contact-container-full-page.transition-enter {
+  .contact-info {
+    left: -90vw;
+  }
+
+  .social-media-info {
+    top: 100vh;
+  }
+}
+
+.contact-container-full-page.transition-enter-done {
+  .contact-info {
+    left: 0;
+  }
+
+  .social-media-info {
+    top: 0;
+  }
+}
+
+.contact-container-full-page.transition-exit {
+  .contact-info {
+    left: -90vw;
+  }
+
+  .social-media-info {
+    top: 100vh;
+  }
+}
