@@ -19,52 +19,52 @@ class App extends Component {
       this.forceUpdate();
     });
 
-    document.body.height = `${window.innerHeight}px`;
+    document.querySelector("html").style.height = `${window.innerHeight}px`;
+
+    document.body.style.height = `${window.innerHeight}px`;
   }
 
   render() {
     if ((window.innerWidth > window.innerHeight) & (window.innerWidth > 768)) {
       return (
-        <Div100vh>
-          <Router>
-            <Navbar />
-            <Route
-              render={({ location }) => (
-                <TransitionGroup component={null}>
-                  <CSSTransition
-                    key={location.key}
-                    timeout={1000}
-                    classNames="transition"
-                    appear
-                  >
-                    <Switch location={location}>
-                      <Route exact path="/" component={Home} />
-                      <Route exact path="/skills" component={Skills} />
-                      <Route exact path="/projects" component={Projects} />
-                      <Route
-                        exact
-                        path="/projects/orinda-books"
-                        component={SpecificProjectPage}
-                      />
-                      <Route
-                        exact
-                        path="/projects/granite-city"
-                        component={SpecificProjectPage}
-                      />
-                      <Route
-                        exact
-                        path="/projects/lotus"
-                        component={SpecificProjectPage}
-                      />
-                      <Route exact path="/contact" component={Contact} />
-                      <Route component={NotFound} />
-                    </Switch>
-                  </CSSTransition>
-                </TransitionGroup>
-              )}
-            />
-          </Router>
-        </Div100vh>
+        <Router>
+          <Navbar />
+          <Route
+            render={({ location }) => (
+              <TransitionGroup component={null}>
+                <CSSTransition
+                  key={location.key}
+                  timeout={1000}
+                  classNames="transition"
+                  appear
+                >
+                  <Switch location={location}>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/skills" component={Skills} />
+                    <Route exact path="/projects" component={Projects} />
+                    <Route
+                      exact
+                      path="/projects/orinda-books"
+                      component={SpecificProjectPage}
+                    />
+                    <Route
+                      exact
+                      path="/projects/granite-city"
+                      component={SpecificProjectPage}
+                    />
+                    <Route
+                      exact
+                      path="/projects/lotus"
+                      component={SpecificProjectPage}
+                    />
+                    <Route exact path="/contact" component={Contact} />
+                    <Route component={NotFound} />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            )}
+          />
+        </Router>
       );
     } else {
       return (
