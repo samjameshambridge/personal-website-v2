@@ -136,17 +136,17 @@ class Skills extends Component {
               <div className="skills-card-bottom-group">
                 <p>
                   {focusSkill === "React"
-                    ? "I write single page web applications in React using the Context API for state management in smaller applications and Redux for larger applications. This is one such application. To view other projects in React, check out my Projects section."
+                    ? "I write single page web applications in React using the Context API for state management in smaller applications and Redux for larger applications."
                     : focusSkill === "Redux"
                     ? "Whenever I write a single page application that gets too big for React's Context API, I normally use Redux for state management."
                     : focusSkill === "Firebase"
-                    ? "I implement back-end systems using Firebase to deliver features such as User Authentication, Cloud Storage and NoSQL Database querying. I am hoping that in the future I will learn back-end development (most likely, Node)."
+                    ? "I implement back-end systems using Firebase to deliver features such as Authentication, Cloud Storage and NoSQL querying. In the future I'll learn back-end development (probably Node)."
                     : focusSkill === "Bootstrap"
                     ? "Bootstrap is my go-to CSS framework, I'm very well-versed with it and when I'm making something small, I normally use it."
                     : focusSkill === "Sass"
                     ? "Sass is a blessing. I have used Less before but primarily I write in Sass simply because I discovered it first. I use both Koala and the Live Sass Compiler in VS Code for compilation."
                     : focusSkill === "Git"
-                    ? "I version control all my projects from the command line and everything is available for viewing on my github page (www.github.com/samjameshambridge)"
+                    ? "I version control all my projects from the command line. Everything is available for on my github (www.github.com/samjameshambridge)"
                     : focusSkill === "CSS-3"
                     ? "I style all my projects with modern CSS-3, writing clear and accessible code."
                     : "I have a strong understanding of modern HTML-5, I' currently taking a lot of time learning accessibility and implementing ARIA features in my web projects."}

@@ -191,7 +191,22 @@ body,
   display: inline-block;
   left: 20vw;
   margin-top: 0;
-  position: relative; }
+  position: relative;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none; }
+  @media screen and (max-width: 576px) {
+    .secondary-page-main-title {
+      font-size: 1.5rem; } }
+  @media screen and (max-width: 768px) {
+    .secondary-page-main-title {
+      font-size: 1.75rem; } }
   @media (orientation: portrait) and (max-width: 768px) {
     .secondary-page-main-title {
       display: block;
@@ -225,6 +240,7 @@ body,
     width: 90vw; }
     @media (orientation: portrait) and (max-width: 768px) {
       .contact-content-container .contact-info {
+        height: 40vh;
         padding: 0;
         top: 0; } }
     .contact-content-container .contact-info p {
@@ -264,7 +280,7 @@ body,
         justify-content: space-evenly;
         left: 5vw;
         min-height: auto;
-        padding: 2rem 0;
+        padding: 1.25rem 0;
         top: 5vh;
         width: 90vw; } }
     @media (orientation: landscape) and (max-width: 992px) {
@@ -341,7 +357,18 @@ body,
         .home-container .home-right-side-container .home-titles-container {
           height: 40vh; } }
       .home-container .home-right-side-container .home-titles-container .home-main-title {
-        font-size: 2.5rem; }
+        font-size: 2.5rem;
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none; }
         @media screen and (max-width: 576px) {
           .home-container .home-right-side-container .home-titles-container .home-main-title {
             font-size: 1.5rem; } }
@@ -351,7 +378,18 @@ body,
       .home-container .home-right-side-container .home-titles-container .home-titles-secondary-group {
         margin-top: auto; }
         .home-container .home-right-side-container .home-titles-container .home-titles-secondary-group .home-titles-developer {
-          font-size: 2rem; }
+          font-size: 2rem;
+          -webkit-touch-callout: none;
+          /* iOS Safari */
+          -webkit-user-select: none;
+          /* Safari */
+          -khtml-user-select: none;
+          /* Konqueror HTML */
+          -moz-user-select: none;
+          /* Firefox */
+          -ms-user-select: none;
+          /* Internet Explorer/Edge */
+          user-select: none; }
           @media screen and (max-width: 576px) {
             .home-container .home-right-side-container .home-titles-container .home-titles-secondary-group .home-titles-developer {
               font-size: 1.4rem; } }
@@ -515,12 +553,19 @@ body,
       @media (orientation: portrait) and (max-width: 768px) {
         .projects-content-container .projects-left-side-container .projects-info-container {
           max-height: 25vh;
-          width: 100%; } }
+          width: 100%;
+          z-index: 1; } }
       .projects-content-container .projects-left-side-container .projects-info-container .projects-specific-secondary-title {
         font-size: 2rem;
         display: inline-block;
         margin-bottom: 0;
         width: 100%; }
+        @media (orientation: portrait) and (max-width: 576px) {
+          .projects-content-container .projects-left-side-container .projects-info-container .projects-specific-secondary-title {
+            font-size: 1.25rem; } }
+        @media (orientation: portrait) and (max-width: 768px) {
+          .projects-content-container .projects-left-side-container .projects-info-container .projects-specific-secondary-title {
+            font-size: 1.5rem; } }
       .projects-content-container .projects-left-side-container .projects-info-container p {
         text-align: center;
         width: 75%; }
@@ -575,7 +620,7 @@ body,
           display: flex;
           flex-flow: row nowrap;
           justify-content: space-evenly;
-          height: 8vh;
+          height: 7vh;
           width: 100%; } }
       .projects-content-container .projects-right-side-container .project-bar:hover {
         cursor: pointer; }
@@ -601,11 +646,14 @@ body,
             display: none;
             right: 0; } }
         .projects-content-container .projects-right-side-container .project-bar .project-bar-button-group a {
-          margin: 0 1rem; }
+          margin: 0 1rem;
+          z-index: 1; }
           @media (orientation: portrait) and (max-width: 768px) {
             .projects-content-container .projects-right-side-container .project-bar .project-bar-button-group a {
               margin: 0;
               padding: 0.33rem 2rem; } }
+          .projects-content-container .projects-right-side-container .project-bar .project-bar-button-group a:hover {
+            cursor: pointer; }
         @media (orientation: portrait) and (max-width: 768px) {
           .projects-content-container .projects-right-side-container .project-bar .project-bar-button-group .projects-github-button {
             display: none; } }
@@ -619,7 +667,7 @@ body,
       border-left: 17.5vh solid transparent;
       height: 0;
       width: 100%;
-      z-index: -10; }
+      z-index: 1; }
       @media (orientation: portrait) and (max-width: 768px) {
         .projects-content-container .projects-right-side-container .project-bar.active-bar {
           align-items: center;
@@ -784,8 +832,8 @@ body,
         height: auto;
         left: 0;
         margin-left: 5vw;
-        padding: 1.25rem;
-        top: 25vh;
+        padding: 1rem;
+        top: 20vh;
         width: 90vw; } }
     .bottom-half-container .skills-info-card .skills-card-top-group {
       align-items: center;
@@ -797,6 +845,12 @@ body,
         display: inline-block;
         font-size: 2rem;
         margin: 0; }
+        @media (orientation: portrait) and (max-width: 576px) {
+          .bottom-half-container .skills-info-card .skills-card-top-group h3 {
+            font-size: 1.25rem; } }
+        @media (orientation: portrait) and (max-width: 768px) {
+          .bottom-half-container .skills-info-card .skills-card-top-group h3 {
+            font-size: 1.5rem; } }
       .bottom-half-container .skills-info-card .skills-card-top-group .skills-specific-project-link {
         text-decoration: underline;
         white-space: nowrap; }

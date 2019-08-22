@@ -4,6 +4,20 @@
   margin-top: 0;
   position: relative;
 
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+
+  @media screen and (max-width: $small) {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: $medium) {
+    font-size: 1.75rem;
+  }
+
   @media (orientation: portrait) and (max-width: $medium) {
     display: block;
     left: 0;

@@ -118,8 +118,8 @@
       height: auto;
       left: 0;
       margin-left: 5vw;
-      padding: 1.25rem;
-      top: 25vh;
+      padding: 1rem;
+      top: 20vh;
       width: 90vw;
     }
 
@@ -131,6 +131,14 @@
         display: inline-block;
         font-size: 2rem;
         margin: 0;
+
+        @media (orientation: portrait) and (max-width: $small) {
+          font-size: 1.25rem;
+        }
+
+        @media (orientation: portrait) and (max-width: $medium) {
+          font-size: 1.5rem;
+        }
       }
 
       .skills-specific-project-link {

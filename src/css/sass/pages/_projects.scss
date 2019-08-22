@@ -50,6 +50,7 @@
       @media (orientation: portrait) and (max-width: $medium) {
         max-height: 25vh;
         width: 100%;
+        z-index: 1;
       }
 
       .projects-specific-secondary-title {
@@ -57,6 +58,14 @@
         display: inline-block;
         margin-bottom: 0;
         width: 100%;
+
+        @media (orientation: portrait) and (max-width: $small) {
+          font-size: 1.25rem;
+        }
+
+        @media (orientation: portrait) and (max-width: $medium) {
+          font-size: 1.5rem;
+        }
       }
 
       p {
@@ -120,7 +129,7 @@
 
       @media (orientation: portrait) and (max-width: $medium) {
         @include displayFlex(center, space-evenly);
-        height: 8vh;
+        height: 7vh;
         width: 100%;
       }
 
@@ -156,10 +165,15 @@
 
         a {
           margin: 0 1rem;
+          z-index: 1;
 
           @media (orientation: portrait) and (max-width: $medium) {
             margin: 0;
             padding: 0.33rem 2rem;
+          }
+
+          &:hover {
+            cursor: pointer;
           }
         }
 
@@ -178,7 +192,7 @@
       border-left: 17.5vh solid transparent;
       height: 0;
       width: 100%;
-      z-index: -10;
+      z-index: 1;
 
       @media (orientation: portrait) and (max-width: $medium) {
         @include displayFlex(center, center);
