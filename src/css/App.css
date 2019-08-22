@@ -434,7 +434,6 @@ body,
         .home-container .home-img-container .home-profile-picture {
           max-height: none;
           position: relative;
-          top: -5vh;
           width: 75%; } }
       @media (orientation: landscape) and (min-width: 1400px) {
         .home-container .home-img-container .home-profile-picture {
@@ -561,7 +560,6 @@ body,
       @media (orientation: portrait) and (max-width: 768px) {
         .projects-content-container .projects-left-side-container .projects-info-container {
           max-height: 20vh;
-          top: 2.5vh;
           width: 100%;
           z-index: 1; } }
       .projects-content-container .projects-left-side-container .projects-info-container .projects-specific-secondary-title {
@@ -609,7 +607,7 @@ body,
     width: 50%; }
     @media (orientation: portrait) and (max-width: 768px) {
       .projects-content-container .projects-right-side-container {
-        height: 50%;
+        height: 60%;
         left: 0;
         top: 0vh;
         width: 100%; } }
