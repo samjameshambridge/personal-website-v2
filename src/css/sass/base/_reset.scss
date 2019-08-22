@@ -1,15 +1,13 @@
-body {
+body,
+#root {
   box-sizing: border-box;
   color: $theme-blue;
   font-family: "Josefin Sans";
   font-size: 16px;
+  min-height: -webkit-fill-available;
   margin: 0;
   overflow: hidden;
   padding: 0;
-
-  @media (orientation: portrait) and (max-width: $medium) {
-    overflow: hidden scroll;
-  }
 
   a {
     color: $theme-blue;

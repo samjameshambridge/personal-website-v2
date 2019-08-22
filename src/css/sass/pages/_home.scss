@@ -1,28 +1,33 @@
 .home-container {
   @include displayFlex(center, flex-start);
+  min-height: -webkit-fill-available;
+  min-width: -webkit-fill-available;
 
   .home-right-side-container {
-    height: 100vh;
-    left: 50vw;
+    min-height: -webkit-fill-available;
+    min-width: -webkit-fill-available;
+    left: 50%;
     position: absolute;
 
     @media (orientation: portrait) {
-      height: 50vh;
+      height: 50%;
       left: 0;
       top: 0;
     }
 
     .home-titles-container {
-      height: 50vh;
-      margin-top: 20vh;
+      height: 50%;
+      left: 0;
+      margin-top: 10%;
+      position: absolute;
       z-index: 1;
 
       @include displayFlex(stretch, flex-start, column nowrap);
 
-      @media screen and (orientation: portrait) {
-        height: 33vh;
-        margin-top: 20vh;
-        width: 100vw;
+      @media (orientation: portrait) {
+        height: 66%;
+        margin-top: 35%;
+        width: 100%;
       }
 
       @media screen and (max-width: $medium) {
@@ -68,25 +73,25 @@
   .home-img-container {
     @include displayFlex(flex-end, flex-start);
     align-self: flex-end;
-    height: 65vh;
+    height: 65%;
     position: relative;
-    left: 10vw;
+    left: 10%;
 
     @media (orientation: portrait) {
-      height: 40vh;
-      left: 12.5vw;
-      width: 75vw;
+      height: 40%;
+      left: 12.5%;
+      width: 75%;
 
       @include displayFlex(flex-start, center);
     }
 
     @media (max-width: $small) and (orientation: portrait) {
       left: 0;
-      width: 100vw;
+      width: 100%;
     }
 
     @media (orientation: landscape) and (min-width: $xx-large) {
-      width: 40vw;
+      width: 40%;
     }
 
     .home-profile-picture {
