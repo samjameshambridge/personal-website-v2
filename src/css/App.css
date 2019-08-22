@@ -38,7 +38,9 @@ body,
   @media (orientation: portrait) and (max-width: 768px) {
     body,
     #root {
-      overflow: hidden scroll; } }
+      background: yellow;
+      min-height: none;
+      height: calc(100vh - 56px); } }
   body a,
   #root a {
     color: #45546c;

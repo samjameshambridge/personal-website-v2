@@ -10,7 +10,9 @@ body,
   padding: 0;
 
   @media (orientation: portrait) and (max-width: $medium) {
-    overflow: hidden scroll;
+    background: yellow;
+    min-height: none;
+    height: calc(100vh - 56px);
   }
 
   a {
