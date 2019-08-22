@@ -19,7 +19,12 @@ class App extends Component {
       this.forceUpdate();
     });
 
-    console.log(window.innerHeight, window.outerHeight);
+    console.log(
+      "window inner height",
+      window.innerHeight,
+      "window outer height",
+      window.outerHeight
+    );
     document.querySelector("html").style.height = `${window.innerHeight}px`;
 
     document.body.style.height = `${window.innerHeight}px`;
