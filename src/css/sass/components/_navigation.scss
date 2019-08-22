@@ -4,23 +4,23 @@
   position: relative;
   z-index: 10;
 
-  @media screen and (orientation: portrait) {
-    margin-left: 37.5vw;
-    padding-top: 2.5vh;
-    position: absolute;
-    width: 25vw;
-
-    @include displayFlex(center, flex-start, column nowrap);
-  }
-
   @media (max-width: $medium) and (orientation: portrait) {
     left: 0;
+    padding-top: 2.5vh;
+    position: absolute;
+    width: 100vw;
+
+    @include displayFlex(center, center);
   }
 
   .fa-bars {
     display: none;
-    text-align: center;
+    left: 85vw;
     min-width: 10vw;
+    position: absolute;
+    text-align: center;
+    transition: all 1s ease;
+    z-index: 10;
 
     @media (max-width: $medium) and (orientation: portrait) {
       display: block;
@@ -32,6 +32,11 @@
     }
   }
 
+  .fa-bars.rotate {
+    display: inline;
+    transform: rotate(90deg) scale(0.75);
+  }
+
   .navigation-ul {
     font-size: 1.2rem;
     list-style: none;
@@ -40,16 +45,14 @@
     width: 100%;
 
     @media (max-width: $medium) and (orientation: portrait) {
-      @include displayFlex(center, center, column nowrap);
-
-      background: $theme-white;
-      display: none;
+      left: 7.5vw;
+      margin: 0;
       opacity: 0;
       padding-top: 0.25rem;
-      position: absolute;
-      top: 60%;
-      transition: all 0.5s ease;
-      z-index: 10;
+      position: relative;
+      transition: all 0.33s ease;
+      width: auto;
+      z-index: 5;
     }
 
     @media screen and (min-width: $xx-large) {
@@ -61,8 +64,7 @@
       margin: 0 1.5em;
 
       @media (max-width: $medium) and (orientation: portrait) {
-        display: block;
-        margin: 0.25rem 0;
+        margin: 0 0.5rem;
       }
 
       a {
@@ -82,5 +84,14 @@
         }
       }
     }
+  }
+
+  .navigation-ul.appear {
+    left: 0;
+    opacity: 1;
+  }
+
+  .navigation-ul.d-none {
+    opacity: 0;
   }
 }

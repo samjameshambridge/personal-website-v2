@@ -7,49 +7,59 @@ import NavItem from "components/navigation/NavItem";
 function Navbar({ className, history: { push }, location: { pathname } }) {
   const [dropdownOpen, setDropdownStatus] = useState(false);
 
-  function onClickHandler(e, pushLocation) {
+  function onDirectionHandler(e, pushLocation) {
     e.preventDefault();
-
-    if (window.innerWidth < 768 && window.innerWidth < window.innerHeight) {
-      const dropdownUl = document.querySelector(".navigation-ul");
-
-      if (dropdownOpen) {
-        dropdownUl.style.display = "none";
-        dropdownUl.style.opacity = "0";
-        setDropdownStatus(false);
-      } else {
-        dropdownUl.style.display = "flex";
-        dropdownUl.style.opacity = "1";
-        setDropdownStatus(true);
-      }
-    }
 
     if (pushLocation) push(pushLocation);
   }
 
+  function onClickHandler(e) {
+    e.preventDefault();
+
+    if (window.innerWidth < 768 && window.innerWidth < window.innerHeight) {
+      const dropdownUl = document.querySelector(".navigation-ul"),
+        bars = document.querySelector(".fa-bars");
+
+      if (dropdownOpen) {
+        dropdownUl.classList.remove("appear");
+        bars.classList.remove("rotate");
+        dropdownUl.classList.add("d-none");
+        setDropdownStatus(false);
+      } else {
+        dropdownUl.classList.remove("d-none");
+        dropdownUl.classList.add("appear");
+        bars.classList.add("rotate");
+        setDropdownStatus(true);
+      }
+    }
+  }
+
   return (
     <nav className={`${className} navigation-nav`}>
-      <i className="fas fa-bars fa-2x" onClick={e => onClickHandler(e)} />
       <ul className="navigation-ul">
         {pathname === "/" || (
-          <NavItem value="Home" onClick={e => onClickHandler(e, "/")} />
+          <NavItem value="Home" onClick={e => onDirectionHandler(e, "/")} />
         )}
         {pathname === "/skills" || (
-          <NavItem value="Skills" onClick={e => onClickHandler(e, "/skills")} />
+          <NavItem
+            value="Skills"
+            onClick={e => onDirectionHandler(e, "/skills")}
+          />
         )}
         {pathname === "/projects" || (
           <NavItem
             value="Projects"
-            onClick={e => onClickHandler(e, "/projects")}
+            onClick={e => onDirectionHandler(e, "/projects")}
           />
         )}
         {pathname === "/contact" || (
           <NavItem
             value="Contact"
-            onClick={e => onClickHandler(e, "/contact")}
+            onClick={e => onDirectionHandler(e, "/contact")}
           />
         )}
       </ul>
+      <i className="fas fa-bars fa-2x" onClick={e => onClickHandler(e)} />
     </nav>
   );
 }

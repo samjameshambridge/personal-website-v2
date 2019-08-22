@@ -129,29 +129,33 @@ body,
   left: 50vw;
   position: relative;
   z-index: 10; }
-  @media screen and (orientation: portrait) {
-    .navigation-nav {
-      margin-left: 37.5vw;
-      padding-top: 2.5vh;
-      position: absolute;
-      width: 25vw;
-      align-items: center;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: flex-start; } }
   @media (max-width: 768px) and (orientation: portrait) {
     .navigation-nav {
-      left: 0; } }
+      left: 0;
+      padding-top: 2.5vh;
+      position: absolute;
+      width: 100vw;
+      align-items: center;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center; } }
   .navigation-nav .fa-bars {
     display: none;
+    left: 85vw;
+    min-width: 10vw;
+    position: absolute;
     text-align: center;
-    min-width: 10vw; }
+    transition: all 1s ease;
+    z-index: 10; }
     @media (max-width: 768px) and (orientation: portrait) {
       .navigation-nav .fa-bars {
         display: block;
         font-size: 1.25rem; } }
     .navigation-nav .fa-bars:hover {
       cursor: pointer; }
+  .navigation-nav .fa-bars.rotate {
+    display: inline;
+    transform: rotate(90deg) scale(0.75); }
   .navigation-nav .navigation-ul {
     font-size: 1.2rem;
     list-style: none;
@@ -160,18 +164,14 @@ body,
     width: 100%; }
     @media (max-width: 768px) and (orientation: portrait) {
       .navigation-nav .navigation-ul {
-        align-items: center;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        background: #fff;
-        display: none;
+        left: 7.5vw;
+        margin: 0;
         opacity: 0;
         padding-top: 0.25rem;
-        position: absolute;
-        top: 60%;
-        transition: all 0.5s ease;
-        z-index: 10; } }
+        position: relative;
+        transition: all 0.33s ease;
+        width: auto;
+        z-index: 5; } }
     @media screen and (min-width: 1400px) {
       .navigation-nav .navigation-ul {
         font-size: 1.75rem; } }
@@ -180,8 +180,7 @@ body,
       margin: 0 1.5em; }
       @media (max-width: 768px) and (orientation: portrait) {
         .navigation-nav .navigation-ul li {
-          display: block;
-          margin: 0.25rem 0; } }
+          margin: 0 0.5rem; } }
       .navigation-nav .navigation-ul li a {
         border-top: none;
         padding: 5px 0;
@@ -194,6 +193,11 @@ body,
             .navigation-nav .navigation-ul li a:hover {
               border-top: none;
               margin-bottom: 0; } }
+  .navigation-nav .navigation-ul.appear {
+    left: 0;
+    opacity: 1; }
+  .navigation-nav .navigation-ul.d-none {
+    opacity: 0; }
 
 .secondary-page-main-title {
   display: inline-block;
