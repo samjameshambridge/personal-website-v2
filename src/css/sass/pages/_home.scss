@@ -121,12 +121,9 @@
 
       @media (orientation: portrait) and (max-width: $small) {
         max-height: none;
+        position: relative;
+        top: -5vh;
         width: 75%;
-      }
-
-      @media (orientation: portrait) and (max-width: $x-small) {
-        max-height: none;
-        width: 95%;
       }
 
       @media (orientation: landscape) and (min-width: $xx-large) {
