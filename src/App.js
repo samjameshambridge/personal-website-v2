@@ -18,17 +18,7 @@ class App extends Component {
       this.forceUpdate();
     });
 
-    window.scrollTo(0, 0);
-
-    if (window.requestFullscreen) {
-      window.requestFullscreen();
-    } else if (window.webkitrequestFullscreen) {
-      window.webkitrequestFullscreen();
-    } else if (window.mozrequestFullscreen) {
-      window.mozrequestFullscreen();
-    } else if (window.msrequestFullscreen) {
-      window.msrequestFullscreen();
-    }
+    window.scrollTo(0, 1);
   }
 
   render() {

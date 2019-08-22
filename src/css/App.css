@@ -35,6 +35,10 @@ body,
   margin: 0;
   overflow: hidden;
   padding: 0; }
+  @media (orientation: portrait) and (max-width: 768px) {
+    body,
+    #root {
+      overflow: hidden scroll; } }
   body a,
   #root a {
     color: #45546c;
