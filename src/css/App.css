@@ -331,7 +331,7 @@ body,
       @media (orientation: portrait) {
         .home-container .home-right-side-container .home-titles-container {
           height: 66%;
-          margin-top: 17.5vh;
+          margin-top: 20vh;
           margin-left: 12.5vw;
           width: 75%; } }
       @media screen and (max-width: 768px) {
@@ -344,17 +344,17 @@ body,
         font-size: 2.5rem; }
         @media screen and (max-width: 576px) {
           .home-container .home-right-side-container .home-titles-container .home-main-title {
-            font-size: 1.75rem; } }
+            font-size: 1.5rem; } }
         @media screen and (max-width: 768px) {
           .home-container .home-right-side-container .home-titles-container .home-main-title {
-            font-size: 2rem; } }
+            font-size: 1.75rem; } }
       .home-container .home-right-side-container .home-titles-container .home-titles-secondary-group {
         margin-top: auto; }
         .home-container .home-right-side-container .home-titles-container .home-titles-secondary-group .home-titles-developer {
           font-size: 2rem; }
           @media screen and (max-width: 576px) {
             .home-container .home-right-side-container .home-titles-container .home-titles-secondary-group .home-titles-developer {
-              font-size: 1.75rem; } }
+              font-size: 1.4rem; } }
         @media (max-width: 768px) and (orientation: portrait) {
           .home-container .home-right-side-container .home-titles-container .home-titles-secondary-group .home-titles-github {
             display: none; } }
