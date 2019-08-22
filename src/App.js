@@ -17,6 +17,10 @@ class App extends Component {
     window.addEventListener("resize", () => {
       this.forceUpdate();
     });
+
+    window.addEventListener("load", function() {
+      window.scrollTo(0, 0);
+    });
   }
 
   render() {
