@@ -29,7 +29,7 @@ class Projects extends Component {
     container.style.height = newHeight;
   }
 
-  mouseOverHandler = e => {
+  changeHandler = e => {
     if (!e.target.classList.contains("project-bar")) {
       let parent = e.target;
 
@@ -125,7 +125,8 @@ class Projects extends Component {
               <div
                 className="project-bar active-bar"
                 id="orinda-books"
-                onMouseEnter={e => this.mouseOverHandler(e)}
+                onMouseEnter={e => this.changeHandler(e)}
+                onClick={e => this.changeHandler(e)}
               >
                 <div className="project-bar-mockup-group">
                   <img
@@ -161,7 +162,8 @@ class Projects extends Component {
               <div
                 className="project-bar"
                 id="granite-city"
-                onMouseEnter={e => this.mouseOverHandler(e)}
+                onMouseEnter={e => this.changeHandler(e)}
+                onClick={e => this.changeHandler(e)}
               >
                 <div className="project-bar-mockup-group">
                   <img
@@ -198,7 +200,8 @@ class Projects extends Component {
               <div
                 className="project-bar"
                 id="lotus"
-                onMouseEnter={e => this.mouseOverHandler(e)}
+                onMouseEnter={e => this.changeHandler(e)}
+                onClick={e => this.changeHandler(e)}
               >
                 <div className="project-bar-mockup-group">
                   <img

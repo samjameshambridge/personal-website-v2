@@ -7,6 +7,10 @@ body {
   overflow: hidden;
   padding: 0;
 
+  @media (orientation: portrait) and (max-width: $medium) {
+    overflow: hidden scroll;
+  }
+
   a {
     color: $theme-blue;
     text-decoration: none;

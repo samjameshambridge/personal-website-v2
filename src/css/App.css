@@ -33,6 +33,9 @@ body {
   margin: 0;
   overflow: hidden;
   padding: 0; }
+  @media (orientation: portrait) and (max-width: 768px) {
+    body {
+      overflow: hidden scroll; } }
   body a {
     color: #45546c;
     text-decoration: none; }
