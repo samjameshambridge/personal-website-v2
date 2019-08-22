@@ -18,16 +18,17 @@
     .home-titles-container {
       height: 50%;
       left: 0;
-      margin-top: 10%;
+      margin-top: 20vh;
       position: absolute;
       z-index: 1;
 
-      @include displayFlex(stretch, flex-start, column nowrap);
+      @include displayFlex(stretch, center, column nowrap);
 
       @media (orientation: portrait) {
         height: 66%;
-        margin-top: 35%;
-        width: 100%;
+        margin-top: 17.5vh;
+        margin-left: 12.5vw;
+        width: 75%;
       }
 
       @media screen and (max-width: $medium) {

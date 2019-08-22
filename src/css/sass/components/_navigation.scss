@@ -5,7 +5,10 @@
   z-index: 10;
 
   @media screen and (orientation: portrait) {
+    margin-left: 37.5vw;
     padding-top: 2.5vh;
+    position: absolute;
+    width: 25vw;
 
     @include displayFlex(center, flex-start, column nowrap);
   }

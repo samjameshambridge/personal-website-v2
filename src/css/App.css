@@ -124,7 +124,10 @@ body,
   z-index: 10; }
   @media screen and (orientation: portrait) {
     .navigation-nav {
+      margin-left: 37.5vw;
       padding-top: 2.5vh;
+      position: absolute;
+      width: 25vw;
       align-items: center;
       display: flex;
       flex-flow: column nowrap;
@@ -318,18 +321,19 @@ body,
     .home-container .home-right-side-container .home-titles-container {
       height: 50%;
       left: 0;
-      margin-top: 10%;
+      margin-top: 20vh;
       position: absolute;
       z-index: 1;
       align-items: stretch;
       display: flex;
       flex-flow: column nowrap;
-      justify-content: flex-start; }
+      justify-content: center; }
       @media (orientation: portrait) {
         .home-container .home-right-side-container .home-titles-container {
           height: 66%;
-          margin-top: 35%;
-          width: 100%; } }
+          margin-top: 17.5vh;
+          margin-left: 12.5vw;
+          width: 75%; } }
       @media screen and (max-width: 768px) {
         .home-container .home-right-side-container .home-titles-container {
           height: 25vh; } }
