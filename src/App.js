@@ -18,15 +18,14 @@ class App extends Component {
       this.forceUpdate();
     });
 
-    var body = document.documentElement;
-    if (body.requestFullscreen) {
-      body.requestFullscreen();
-    } else if (body.webkitrequestFullscreen) {
-      body.webkitrequestFullscreen();
-    } else if (body.mozrequestFullscreen) {
-      body.mozrequestFullscreen();
-    } else if (body.msrequestFullscreen) {
-      body.msrequestFullscreen();
+    if (window.requestFullscreen) {
+      window.requestFullscreen();
+    } else if (window.webkitrequestFullscreen) {
+      window.webkitrequestFullscreen();
+    } else if (window.mozrequestFullscreen) {
+      window.mozrequestFullscreen();
+    } else if (window.msrequestFullscreen) {
+      window.msrequestFullscreen();
     }
   }
 
