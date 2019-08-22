@@ -21,7 +21,7 @@
         grid-template-columns: repeat(3, 20vw);
         grid-gap: 7.5vw;
         left: 0;
-        top: 5vh;
+        top: 2.5vh;
       }
 
       .skill-img {
@@ -74,6 +74,7 @@
           border-bottom: 25vw solid $theme-yellow;
           border-right: 35vw solid transparent;
           left: 0;
+          top: 27.5vh;
         }
       }
 

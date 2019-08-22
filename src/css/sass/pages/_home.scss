@@ -26,7 +26,7 @@
 
       @media (orientation: portrait) {
         height: 66%;
-        margin-top: 20vh;
+        margin-top: 15vh;
         margin-left: 12.5vw;
         width: 75%;
       }
@@ -100,7 +100,7 @@
       @include displayFlex(flex-start, center);
     }
 
-    @media (max-width: $small) and (orientation: portrait) {
+    @media (max-width: $medium) and (orientation: portrait) {
       left: 0;
       width: 100%;
     }
@@ -114,9 +114,19 @@
       max-height: 100%;
       z-index: 1;
 
-      @media (orientation: portrait) {
-        max-height: 100%;
-        max-width: 100%;
+      @media (orientation: portrait) and (max-width: $medium) {
+        max-height: none;
+        width: 50%;
+      }
+
+      @media (orientation: portrait) and (max-width: $small) {
+        max-height: none;
+        width: 75%;
+      }
+
+      @media (orientation: portrait) and (max-width: $x-small) {
+        max-height: none;
+        width: 95%;
       }
 
       @media (orientation: landscape) and (min-width: $xx-large) {
@@ -133,7 +143,7 @@
         background: $theme-cyan;
         display: block;
         height: 39vh;
-        left: 37.5vw;
+        left: 50vw;
         position: absolute;
         top: 1vh;
         width: 25vw;
@@ -141,7 +151,8 @@
       }
 
       @media (max-width: $small) and (orientation: portrait) {
-        left: 50vw;
+        height: 45vh;
+        top: -5vh;
       }
     }
 
@@ -159,7 +170,7 @@
         border-bottom: none;
         border-right: none;
         height: 45vh;
-        left: 12.5vw;
+        left: 25vw;
         top: -2.5vh;
         transform: rotate(0deg);
         width: 25vw;
