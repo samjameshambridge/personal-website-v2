@@ -23,7 +23,9 @@ class App extends Component {
       "window inner height",
       window.innerHeight,
       "window outer height",
-      window.outerHeight
+      window.outerHeight,
+      "screen height",
+      window.screen.height
     );
     document.querySelector("html").style.height = `${window.innerHeight}px`;
 
