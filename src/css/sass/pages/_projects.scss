@@ -18,7 +18,7 @@
       max-height: 25vh;
       left: 0;
       order: 2;
-      top: 0;
+      top: 2.5vh;
       width: 90vw;
     }
 
@@ -115,7 +115,7 @@
     @media (orientation: portrait) and (max-width: $medium) {
       height: 60%;
       left: 0;
-      top: 0vh;
+      top: 2.5vh;
       width: 100%;
     }
 
@@ -129,7 +129,7 @@
 
       @media (orientation: portrait) and (max-width: $medium) {
         @include displayFlex(center, space-evenly);
-        height: 7vh;
+        height: 6vh;
         width: 100%;
       }
 
@@ -140,6 +140,10 @@
       .laptop-mockup,
       .mobile-mockup {
         max-height: 7.5vh;
+
+        @media (orientation: portrait) and (max-width: $medium) {
+          max-height: 6vh;
+        }
       }
 
       .mobile-mockup {
