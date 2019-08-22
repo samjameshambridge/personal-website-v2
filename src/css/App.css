@@ -38,7 +38,6 @@ body,
   @media (orientation: portrait) and (max-width: 768px) {
     body,
     #root {
-      background: yellow;
       min-height: none;
       height: calc(100vh - 56px); } }
   body a,
