@@ -9,13 +9,6 @@ body,
   overflow: hidden;
   padding: 0;
 
-  @media (orientation: portrait) and (max-width: $medium) {
-    min-height: none;
-    height: calc(100vh - 56px);
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-  }
-
   a {
     color: $theme-blue;
     text-decoration: none;

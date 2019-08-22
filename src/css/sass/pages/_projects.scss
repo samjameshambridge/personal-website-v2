@@ -130,7 +130,7 @@
       @media (orientation: portrait) and (max-width: $medium) {
         @include displayFlex(center, space-evenly);
         height: 6vh;
-        width: 100%;
+        width: 60%;
       }
 
       &:hover {
@@ -203,6 +203,7 @@
         background: $theme-cyan;
         border: none;
         height: 15vh;
+        width: 90%;
       }
 
       .project-bar-mockup-group,

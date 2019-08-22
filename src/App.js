@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import Div100vh from "react-div-100vh";
 
 import "css/App.css";
 
@@ -17,8 +18,6 @@ class App extends Component {
     window.addEventListener("resize", () => {
       this.forceUpdate();
     });
-
-    window.scrollTo(0, 1);
   }
 
   render() {
@@ -65,16 +64,18 @@ class App extends Component {
       );
     } else {
       return (
-        <Router>
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/skills" component={Skills} />
-            <Route exact path="/projects" component={Projects} />
-            <Route exact path="/contact" component={Contact} />
-            <Route component={NotFound} />
-          </Switch>
-        </Router>
+        <Div100vh>
+          <Router>
+            <Navbar />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/skills" component={Skills} />
+              <Route exact path="/projects" component={Projects} />
+              <Route exact path="/contact" component={Contact} />
+              <Route component={NotFound} />
+            </Switch>
+          </Router>
+        </Div100vh>
       );
     }
   }

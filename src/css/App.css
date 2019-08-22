@@ -35,13 +35,6 @@ body,
   margin: 0;
   overflow: hidden;
   padding: 0; }
-  @media (orientation: portrait) and (max-width: 768px) {
-    body,
-    #root {
-      min-height: none;
-      height: calc(100vh - 56px);
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch; } }
   body a,
   #root a {
     color: #45546c;
@@ -164,6 +157,7 @@ body,
     width: 100%; }
     @media (max-width: 768px) and (orientation: portrait) {
       .navigation-nav .navigation-ul {
+        font-size: 1rem;
         left: 7.5vw;
         margin: 0;
         opacity: 0;
@@ -639,7 +633,7 @@ body,
           flex-flow: row nowrap;
           justify-content: space-evenly;
           height: 6vh;
-          width: 100%; } }
+          width: 60%; } }
       .projects-content-container .projects-right-side-container .project-bar:hover {
         cursor: pointer; }
       .projects-content-container .projects-right-side-container .project-bar .laptop-mockup,
@@ -698,7 +692,8 @@ body,
           justify-content: center;
           background: #9bd4e4;
           border: none;
-          height: 15vh; } }
+          height: 15vh;
+          width: 90%; } }
       .projects-content-container .projects-right-side-container .project-bar.active-bar .project-bar-mockup-group,
       .projects-content-container .projects-right-side-container .project-bar.active-bar .project-bar-button-group {
         position: relative;
