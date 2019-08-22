@@ -562,7 +562,8 @@ body,
       z-index: 10; }
       @media (orientation: portrait) and (max-width: 768px) {
         .projects-content-container .projects-left-side-container .projects-info-container {
-          max-height: 25vh;
+          max-height: 20vh;
+          top: 2.5vh;
           width: 100%;
           z-index: 1; } }
       .projects-content-container .projects-left-side-container .projects-info-container .projects-specific-secondary-title {
@@ -612,7 +613,7 @@ body,
       .projects-content-container .projects-right-side-container {
         height: 50%;
         left: 0;
-        top: -2.5vh;
+        top: 0vh;
         width: 100%; } }
     .projects-content-container .projects-right-side-container .project-bar {
       align-items: center;

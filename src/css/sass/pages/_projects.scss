@@ -48,7 +48,8 @@
       z-index: 10;
 
       @media (orientation: portrait) and (max-width: $medium) {
-        max-height: 25vh;
+        max-height: 20vh;
+        top: 2.5vh;
         width: 100%;
         z-index: 1;
       }
@@ -115,7 +116,7 @@
     @media (orientation: portrait) and (max-width: $medium) {
       height: 50%;
       left: 0;
-      top: -2.5vh;
+      top: 0vh;
       width: 100%;
     }
 
