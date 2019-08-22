@@ -31,7 +31,7 @@ body,
   color: #45546c;
   font-family: "Josefin Sans";
   font-size: 16px;
-  min-height: -webkit-fill-available;
+  height: 100%;
   margin: 0;
   overflow: hidden;
   padding: 0; }
@@ -39,7 +39,9 @@ body,
     body,
     #root {
       min-height: none;
-      height: calc(100vh - 56px); } }
+      height: calc(100vh - 56px);
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch; } }
   body a,
   #root a {
     color: #45546c;
