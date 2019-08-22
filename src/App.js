@@ -18,6 +18,8 @@ class App extends Component {
       this.forceUpdate();
     });
 
+    window.scrollTo(0, 0);
+
     if (window.requestFullscreen) {
       window.requestFullscreen();
     } else if (window.webkitrequestFullscreen) {
