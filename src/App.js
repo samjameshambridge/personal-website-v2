@@ -25,44 +25,46 @@ class App extends Component {
   render() {
     if ((window.innerWidth > window.innerHeight) & (window.innerWidth > 768)) {
       return (
-        <Router>
-          <Navbar />
-          <Route
-            render={({ location }) => (
-              <TransitionGroup component={null}>
-                <CSSTransition
-                  key={location.key}
-                  timeout={1000}
-                  classNames="transition"
-                  appear
-                >
-                  <Switch location={location}>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/skills" component={Skills} />
-                    <Route exact path="/projects" component={Projects} />
-                    <Route
-                      exact
-                      path="/projects/orinda-books"
-                      component={SpecificProjectPage}
-                    />
-                    <Route
-                      exact
-                      path="/projects/granite-city"
-                      component={SpecificProjectPage}
-                    />
-                    <Route
-                      exact
-                      path="/projects/lotus"
-                      component={SpecificProjectPage}
-                    />
-                    <Route exact path="/contact" component={Contact} />
-                    <Route component={NotFound} />
-                  </Switch>
-                </CSSTransition>
-              </TransitionGroup>
-            )}
-          />
-        </Router>
+        <Div100vh>
+          <Router>
+            <Navbar />
+            <Route
+              render={({ location }) => (
+                <TransitionGroup component={null}>
+                  <CSSTransition
+                    key={location.key}
+                    timeout={1000}
+                    classNames="transition"
+                    appear
+                  >
+                    <Switch location={location}>
+                      <Route exact path="/" component={Home} />
+                      <Route exact path="/skills" component={Skills} />
+                      <Route exact path="/projects" component={Projects} />
+                      <Route
+                        exact
+                        path="/projects/orinda-books"
+                        component={SpecificProjectPage}
+                      />
+                      <Route
+                        exact
+                        path="/projects/granite-city"
+                        component={SpecificProjectPage}
+                      />
+                      <Route
+                        exact
+                        path="/projects/lotus"
+                        component={SpecificProjectPage}
+                      />
+                      <Route exact path="/contact" component={Contact} />
+                      <Route component={NotFound} />
+                    </Switch>
+                  </CSSTransition>
+                </TransitionGroup>
+              )}
+            />
+          </Router>
+        </Div100vh>
       );
     } else {
       return (
