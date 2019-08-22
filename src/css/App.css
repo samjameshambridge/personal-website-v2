@@ -25,6 +25,7 @@
   .full-page-container.transition-exit .home-titles-developer,
   .full-page-container.transition-exit .home-titles-github {
     opacity: 0; } }
+html,
 body,
 #root {
   box-sizing: border-box;
@@ -35,31 +36,40 @@ body,
   margin: 0;
   overflow: hidden;
   padding: 0; }
+  html a,
   body a,
   #root a {
     color: #45546c;
     text-decoration: none; }
+    html a:hover,
     body a:hover,
     #root a:hover {
       cursor: pointer; }
+  html button,
   body button,
   #root button {
     font-weight: 550; }
+    html button:hover,
     body button:hover,
     #root button:hover {
       cursor: pointer; }
+    html button:focus,
     body button:focus,
     #root button:focus {
       outline: none; }
+  html h1,
+  html h3,
   body h1,
   body h3,
   #root h1,
   #root h3 {
     font-weight: normal;
     text-align: center; }
+  html h1,
   body h1,
   #root h1 {
     font-family: "Rock Salt"; }
+  html i,
   body i,
   #root i {
     -webkit-tap-highlight-color: transparent;
@@ -69,6 +79,7 @@ body,
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+    html i:focus,
     body i:focus,
     #root i:focus {
       outline: none; }

@@ -18,6 +18,8 @@ class App extends Component {
     window.addEventListener("resize", () => {
       this.forceUpdate();
     });
+
+    document.body.height = `${window.innerHeight}px`;
   }
 
   render() {
