@@ -19,17 +19,12 @@ class App extends Component {
       this.forceUpdate();
     });
 
-    console.log(
-      "window inner height",
-      window.innerHeight,
-      "window outer height",
-      window.outerHeight,
-      "screen height",
-      window.screen.height
-    );
-    document.querySelector("html").style.height = `${window.innerHeight}px`;
-
-    document.body.style.height = `${window.innerHeight}px`;
+    var ua = navigator.userAgent.toLowerCase();
+    var isAndroid = ua.indexOf("android") > -1;
+    if (isAndroid) {
+      document.body.style.height = `${window.innerHeight - 55}px`;
+      console.log("is android");
+    }
   }
 
   render() {
