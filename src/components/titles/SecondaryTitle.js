@@ -7,7 +7,7 @@ function SecondaryTitle({ className, value }) {
 
 SecondaryTitle.propTypes = {
   className: PropTypes.string,
-  value: PropTypes.string.isRequired
+  value: PropTypes.string
 };
 
 SecondaryTitle.defaultProps = {

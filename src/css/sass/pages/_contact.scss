@@ -86,7 +86,9 @@
     img {
       color: $theme-blue;
       max-height: 10vh;
-      transition: transform ease 0.25s;
+      transition: transform ease 0.33s;
+
+      @include noSelect();
 
       &:hover {
         cursor: pointer;

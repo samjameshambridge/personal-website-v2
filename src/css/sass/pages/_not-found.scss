@@ -3,6 +3,22 @@
   position: relative;
   top: 25vh;
 
+  &::before,
+  &::after {
+    color: $theme-yellow;
+    position: relative;
+  }
+
+  &::before {
+    content: "{";
+    right: 0.5em;
+  }
+
+  &::after {
+    content: "}";
+    left: 0.5em;
+  }
+
   @media (orientation: portrait) and (max-width: $medium) {
     font-size: 1.5rem;
     padding: 0 1rem;
