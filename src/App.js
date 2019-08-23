@@ -21,9 +21,17 @@ class App extends Component {
 
     var ua = navigator.userAgent.toLowerCase();
     var isAndroid = ua.indexOf("android") > -1;
+
     if (isAndroid) {
+      console.log(
+        "inner height",
+        window.innerHeight,
+        "outer height",
+        window.outerHeight,
+        "screen height",
+        window.screen.availHeight
+      );
       document.body.style.height = `${window.innerHeight - 55}px`;
-      console.log("is android");
     }
   }
 
