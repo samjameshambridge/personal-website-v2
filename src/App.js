@@ -21,13 +21,6 @@ class App extends Component {
   }
 
   render() {
-    // var ua = navigator.userAgent.toLowerCase();
-    // var isAndroid = ua.indexOf("android") > -1;
-
-    // if (isAndroid) {
-    //   document.body.style.height = `${window.screen.availHeight - 55}px`;
-    // }
-
     if ((window.innerWidth > window.innerHeight) & (window.innerWidth > 768)) {
       return (
         <Router>

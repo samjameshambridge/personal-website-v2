@@ -146,7 +146,6 @@ class Projects extends Component {
                     className="projects-visit-button small-btn-theme"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={e => console.log(e)}
                   >
                     Visit
                   </a>

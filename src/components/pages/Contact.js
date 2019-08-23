@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 
 import MainTitle from "components/titles/MainTitle";
 
+import GithubLogo from "img/github-logo.png";
+import InstagramLogo from "img/instagram-logo.png";
+import LinkedinLogo from "img/linkedin-logo.png";
+
 function Contact() {
   useEffect(() => {
     const content = document.querySelector(".contact-content-container");
@@ -21,9 +25,27 @@ function Contact() {
             <p>07340471548</p>
           </div>
           <div className="social-media-info">
-            <i className="fab fa-github fa-5x" />
-            <i className="fab fa-linkedin fa-5x" />
-            <i className="fab fa-instagram fa-5x" />
+            <a
+              href="https://github.com/samjameshambridge"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={GithubLogo} alt="github logo" />
+            </a>
+            <a
+              href="https://linkedin.com/samjameshambridge"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={LinkedinLogo} alt="linkedin logo" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/samuel-hambridge-2a168816b/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={InstagramLogo} alt="instagram logo" />
+            </a>
           </div>
         </div>
       </div>
