@@ -26,16 +26,16 @@ class App extends Component {
       console.log(
         "inner height",
         window.innerHeight,
-        "outer height",
-        window.outerHeight,
-        "screen height",
+        "screen avail height",
         window.screen.availHeight
       );
-      document.body.style.height = `${(window.screen, availHeight - 55)}px`;
     }
   }
 
   render() {
+    document.body.style.height = `${(window.screen.availHeight,
+    availHeight - 55)}px`;
+
     if ((window.innerWidth > window.innerHeight) & (window.innerWidth > 768)) {
       return (
         <Router>
