@@ -1,6 +1,6 @@
 # [Personal Website](https://www.samjameshambridge.com)
 
-<img src="./img/profile-pic.jpg" width="200">
+<img src="./src/img/profile-pic.png" width="200">
 
 ## Table of contents
 
