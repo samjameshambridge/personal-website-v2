@@ -31,7 +31,7 @@ class App extends Component {
         "screen height",
         window.screen.availHeight
       );
-      document.body.style.height = `${window.innerHeight - 55}px`;
+      document.body.style.height = `${(window.screen, availHeight - 55)}px`;
     }
   }
 
