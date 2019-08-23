@@ -84,20 +84,16 @@
 
         @media (orientation: portrait) and (max-width: $medium) {
           display: block;
-          font-size: 0.8rem;
+          font-size: 0.7rem;
           margin-bottom: 1rem;
           text-decoration: underline;
-        }
-
-        @media (orientation: portrait) and (max-width: $medium) {
-          font-size: 0.7rem;
         }
       }
 
       .projects-learn-more-button {
         margin-bottom: 2rem;
 
-        @media (orientation: portrait) and (max-width: $medium) {
+        @media (max-width: $medium) {
           display: none;
         }
       }

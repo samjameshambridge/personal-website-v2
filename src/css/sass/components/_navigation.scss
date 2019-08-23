@@ -51,6 +51,10 @@
       z-index: 5;
     }
 
+    @media (orientation: landscape) and (max-width: $large) {
+      font-size: 0.9rem;
+    }
+
     @media screen and (min-width: $xx-large) {
       font-size: 1.25rem;
     }
@@ -61,6 +65,10 @@
       padding: 5px 0;
 
       @media (max-width: $medium) and (orientation: portrait) {
+        margin: 0 0.5rem;
+      }
+
+      @media (orientation: landscape) and (max-width: $large) {
         margin: 0 0.5rem;
       }
 

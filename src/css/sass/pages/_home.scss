@@ -14,6 +14,7 @@
       height: 50%;
       left: 0;
       top: 0;
+      width: 100%;
     }
 
     .home-titles-container {
@@ -25,13 +26,8 @@
 
       @media (orientation: portrait) {
         height: 66%;
-        margin-top: 15vh;
-        margin-left: 12.5vw;
-        width: 75%;
-      }
-
-      @media screen and (max-width: $medium) {
-        height: 25vh;
+        top: 15vh;
+        width: 80%;
       }
 
       @media (orientation: landscape) and (min-width: $xx-large) {
@@ -43,24 +39,24 @@
 
         @include noSelect();
 
-        @media screen and (max-width: $small) {
-          font-size: 1.5rem;
-        }
-
-        @media screen and (max-width: $medium) {
-          font-size: 1.75rem;
-        }
-
-        @media screen and (max-width: $large) {
-          font-size: 2rem;
+        @media screen and (max-width: $xx-large) {
+          font-size: 2.75rem;
         }
 
         @media screen and (max-width: $x-large) {
           font-size: 2.25rem;
         }
 
-        @media screen and (max-width: $xx-large) {
-          font-size: 2.75rem;
+        @media screen and (max-width: $large) {
+          font-size: 2rem;
+        }
+
+        @media screen and (max-width: $medium) {
+          font-size: 1.75rem;
+        }
+
+        @media screen and (max-width: $small) {
+          font-size: 1.5rem;
         }
       }
 
@@ -72,26 +68,30 @@
 
           @include noSelect();
 
-          @media screen and (max-width: $small) {
-            font-size: 1.5rem;
+          @media (orientation: landscape) and (max-width: $x-large) {
+            font-size: 2.25rem;
+          }
+
+          @media (orientation: landscape) and (max-width: $large) {
+            font-size: 2rem;
           }
 
           @media screen and (max-width: $medium) {
             font-size: 1.75rem;
           }
 
-          @media screen and (max-width: $large) {
-            font-size: 2rem;
-          }
-
-          @media screen and (max-width: $x-large) {
-            font-size: 2.25rem;
+          @media screen and (max-width: $small) {
+            font-size: 1.5rem;
           }
         }
 
         .home-titles-github {
           @media (max-width: $medium) and (orientation: portrait) {
             display: none;
+          }
+
+          @media (orientation: landscape) and (max-width: $large) {
+            font-size: 0.8rem;
           }
         }
       }
@@ -132,13 +132,17 @@
 
       @media (orientation: portrait) and (max-width: $medium) {
         max-height: none;
-        width: 50%;
+        max-width: 50%;
       }
 
       @media (orientation: portrait) and (max-width: $small) {
-        max-height: none;
+        max-height: 100%;
         position: relative;
-        width: 75%;
+        max-width: none;
+      }
+
+      @media (orientation: landscape) and (max-width: $large) {
+        max-height: 75%;
       }
 
       @media (orientation: landscape) and (min-width: $xx-large) {

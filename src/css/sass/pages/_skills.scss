@@ -29,6 +29,8 @@
         box-shadow: $main-shadow;
         max-height: 15vh;
 
+        @include noSelect();
+
         @media screen and (max-width: $medium) {
           max-height: 12.5vh;
         }
@@ -114,9 +116,13 @@
     top: 15vh;
     width: 90vw;
 
+    @media (orientation: portrait) {
+      height: auto;
+      min-height: auto;
+    }
+
     @media (orientation: portrait) and (max-width: $medium) {
       @include displayFlex(center, flex-start, column nowrap);
-      height: auto;
       left: 0;
       margin-left: 5vw;
       padding: 1rem;
