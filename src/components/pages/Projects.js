@@ -129,16 +129,18 @@ class Projects extends Component {
                 onClick={e => this.changeHandler(e)}
               >
                 <div className="project-bar-mockup-group">
-                  <img
-                    src={OrindaLaptopMockup}
-                    className="laptop-mockup"
-                    alt="Laptop Screen with Orinda Books"
-                  />
-                  <img
-                    src={OrindaMobileMockup}
-                    alt="mobile mockup"
-                    className="mobile-mockup"
-                  />
+                  <Link to="/projects/orinda-books">
+                    <img
+                      src={OrindaLaptopMockup}
+                      className="laptop-mockup"
+                      alt="Laptop Screen with Orinda Books"
+                    />
+                    <img
+                      src={OrindaMobileMockup}
+                      alt="mobile mockup"
+                      className="mobile-mockup"
+                    />
+                  </Link>
                 </div>
                 <div className="project-bar-button-group">
                   <a
@@ -166,25 +168,25 @@ class Projects extends Component {
                 onClick={e => this.changeHandler(e)}
               >
                 <div className="project-bar-mockup-group">
-                  <img
-                    src={GraniteLaptopMockup}
-                    className="laptop-mockup"
-                    alt="Laptop screen with Granite City"
-                  />
-                  <img
-                    src={GraniteMobileMockup}
-                    alt="mobile mockup"
-                    className="mobile-mockup"
-                  />
+                  <Link to="/projects/granite-city">
+                    <img
+                      src={GraniteLaptopMockup}
+                      className="laptop-mockup"
+                      alt="Laptop screen with Granite City"
+                    />
+                    <img
+                      src={GraniteMobileMockup}
+                      alt="mobile mockup"
+                      className="mobile-mockup"
+                    />
+                  </Link>
                 </div>
-
                 <div className="project-bar-button-group">
                   <a
                     href="https://samjameshambridge.github.io/Granite-City/"
                     className="projects-visit-button small-btn-theme"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={e => console.log(e)}
                   >
                     Visit
                   </a>
@@ -205,16 +207,18 @@ class Projects extends Component {
                 onClick={e => this.changeHandler(e)}
               >
                 <div className="project-bar-mockup-group">
-                  <img
-                    src={LotusLaptopMockup}
-                    className="laptop-mockup"
-                    alt="Laptop screen with Lotus.png"
-                  />
-                  <img
-                    src={LotusMobileMockup}
-                    alt="mobile mockup"
-                    className="mobile-mockup"
-                  />
+                  <Link to="/projects/lotus">
+                    <img
+                      src={LotusLaptopMockup}
+                      className="laptop-mockup"
+                      alt="Laptop screen with Lotus.png"
+                    />
+                    <img
+                      src={LotusMobileMockup}
+                      alt="mobile mockup"
+                      className="mobile-mockup"
+                    />
+                  </Link>
                 </div>
 
                 <div className="project-bar-button-group">

@@ -125,12 +125,12 @@
       height: 10vh;
       position: relative;
       transition: left 1s ease;
-      width: 90%;
+      width: 45vw;
 
       @media (orientation: portrait) and (max-width: $medium) {
         @include displayFlex(center, space-evenly);
         height: 6vh;
-        width: 60%;
+        width: 60vw;
       }
 
       &:hover {

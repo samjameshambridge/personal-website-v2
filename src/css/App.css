@@ -646,7 +646,7 @@ body,
       height: 10vh;
       position: relative;
       transition: left 1s ease;
-      width: 90%; }
+      width: 45vw; }
       @media (orientation: portrait) and (max-width: 768px) {
         .projects-content-container .projects-right-side-container .project-bar {
           align-items: center;
@@ -654,7 +654,7 @@ body,
           flex-flow: row nowrap;
           justify-content: space-evenly;
           height: 6vh;
-          width: 60%; } }
+          width: 60vw; } }
       .projects-content-container .projects-right-side-container .project-bar:hover {
         cursor: pointer; }
       .projects-content-container .projects-right-side-container .project-bar .laptop-mockup,
