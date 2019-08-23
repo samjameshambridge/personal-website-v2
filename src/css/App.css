@@ -174,7 +174,7 @@ body,
         z-index: 5; } }
     @media screen and (min-width: 1400px) {
       .navigation-nav .navigation-ul {
-        font-size: 1.75rem; } }
+        font-size: 1.25rem; } }
     .navigation-nav .navigation-ul li {
       display: inline;
       margin: 0 1.5em; }
@@ -352,8 +352,12 @@ body,
   min-height: -webkit-fill-available;
   min-width: -webkit-fill-available; }
   .home-container .home-right-side-container {
-    min-height: -webkit-fill-available;
-    min-width: -webkit-fill-available;
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
     left: 50%;
     position: absolute; }
     @media (orientation: portrait) {
@@ -363,8 +367,6 @@ body,
         top: 0; } }
     .home-container .home-right-side-container .home-titles-container {
       height: 50%;
-      left: 0;
-      margin-top: 20vh;
       position: absolute;
       z-index: 1;
       align-items: stretch;
@@ -384,7 +386,7 @@ body,
         .home-container .home-right-side-container .home-titles-container {
           height: 40vh; } }
       .home-container .home-right-side-container .home-titles-container .home-main-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
         -webkit-touch-callout: none;
         /* iOS Safari */
         -webkit-user-select: none;
@@ -402,10 +404,19 @@ body,
         @media screen and (max-width: 768px) {
           .home-container .home-right-side-container .home-titles-container .home-main-title {
             font-size: 1.75rem; } }
+        @media screen and (max-width: 992px) {
+          .home-container .home-right-side-container .home-titles-container .home-main-title {
+            font-size: 2rem; } }
+        @media screen and (max-width: 1200px) {
+          .home-container .home-right-side-container .home-titles-container .home-main-title {
+            font-size: 2.25rem; } }
+        @media screen and (max-width: 1400px) {
+          .home-container .home-right-side-container .home-titles-container .home-main-title {
+            font-size: 2.75rem; } }
       .home-container .home-right-side-container .home-titles-container .home-titles-secondary-group {
         margin-top: auto; }
         .home-container .home-right-side-container .home-titles-container .home-titles-secondary-group .home-titles-developer {
-          font-size: 2rem;
+          font-size: 2.5rem;
           -webkit-touch-callout: none;
           /* iOS Safari */
           -webkit-user-select: none;
@@ -419,7 +430,16 @@ body,
           user-select: none; }
           @media screen and (max-width: 576px) {
             .home-container .home-right-side-container .home-titles-container .home-titles-secondary-group .home-titles-developer {
-              font-size: 1.4rem; } }
+              font-size: 1.5rem; } }
+          @media screen and (max-width: 768px) {
+            .home-container .home-right-side-container .home-titles-container .home-titles-secondary-group .home-titles-developer {
+              font-size: 1.75rem; } }
+          @media screen and (max-width: 992px) {
+            .home-container .home-right-side-container .home-titles-container .home-titles-secondary-group .home-titles-developer {
+              font-size: 2rem; } }
+          @media screen and (max-width: 1200px) {
+            .home-container .home-right-side-container .home-titles-container .home-titles-secondary-group .home-titles-developer {
+              font-size: 2.25rem; } }
         @media (max-width: 768px) and (orientation: portrait) {
           .home-container .home-right-side-container .home-titles-container .home-titles-secondary-group .home-titles-github {
             display: none; } }
@@ -451,7 +471,19 @@ body,
     .home-container .home-img-container .home-profile-picture {
       align-self: flex-end;
       max-height: 100%;
-      z-index: 1; }
+      transition: all 1s ease;
+      z-index: 1;
+      -webkit-touch-callout: none;
+      /* iOS Safari */
+      -webkit-user-select: none;
+      /* Safari */
+      -khtml-user-select: none;
+      /* Konqueror HTML */
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none;
+      /* Internet Explorer/Edge */
+      user-select: none; }
       @media (orientation: portrait) and (max-width: 768px) {
         .home-container .home-img-container .home-profile-picture {
           max-height: none;
@@ -486,11 +518,14 @@ body,
       border-bottom: 30vw solid #ffde59;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       height: 0;
+      left: -15vw;
       position: absolute;
+      top: 22.5vh;
       transform: rotate(-70deg);
+      transition: all 1s ease;
       width: 55vw;
       z-index: -1; }
-      @media (orientation: portrait) {
+      @media (max-width: 768px) and (orientation: portrait) {
         .home-container .home-img-container .home-yellow-trapezoid {
           background: #ffde59;
           border-bottom: none;
@@ -500,19 +535,7 @@ body,
           top: -2.5vh;
           transform: rotate(0deg);
           width: 25vw; } }
-      @media (max-width: 576px) and (orientation: portrait) {
-        .home-container .home-img-container .home-yellow-trapezoid {
-          left: 25vw; } }
-      @media (min-width: 768px) and (orientation: landscape) {
-        .home-container .home-img-container .home-yellow-trapezoid {
-          left: -15vw;
-          top: 25vh; } }
 
-@media (orientation: landscape) and (min-width: 768px) {
-  .home-container .home-profile-picture,
-  .home-container .home-yellow-trapezoid {
-    opacity: 1;
-    transition: all 1s ease; } }
 .home-container.transition-enter .home-profile-picture,
 .home-container.transition-enter .home-yellow-trapezoid {
   opacity: 0; }
@@ -738,11 +761,7 @@ body,
             margin-left: 0; } }
       .projects-content-container .projects-right-side-container .project-bar.active-bar .laptop-mockup,
       .projects-content-container .projects-right-side-container .project-bar.active-bar .mobile-mockup {
-        max-height: 25vh; }
-        @media screen and (max-width: 1200px) {
-          .projects-content-container .projects-right-side-container .project-bar.active-bar .laptop-mockup,
-          .projects-content-container .projects-right-side-container .project-bar.active-bar .mobile-mockup {
-            max-height: 20vh; } }
+        max-height: 20vh; }
         @media (orientation: landscape) and (max-width: 992px) {
           .projects-content-container .projects-right-side-container .project-bar.active-bar .laptop-mockup,
           .projects-content-container .projects-right-side-container .project-bar.active-bar .mobile-mockup {

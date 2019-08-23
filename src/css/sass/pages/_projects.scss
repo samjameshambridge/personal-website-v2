@@ -233,11 +233,7 @@
 
       .laptop-mockup,
       .mobile-mockup {
-        max-height: 25vh;
-
-        @media screen and (max-width: $x-large) {
-          max-height: 20vh;
-        }
+        max-height: 20vh;
 
         @media (orientation: landscape) and (max-width: $large) {
           max-height: 15vh;

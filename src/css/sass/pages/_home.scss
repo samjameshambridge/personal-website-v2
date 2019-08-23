@@ -4,8 +4,9 @@
   min-width: -webkit-fill-available;
 
   .home-right-side-container {
-    min-height: -webkit-fill-available;
-    min-width: -webkit-fill-available;
+    @include displayFlex(center, center);
+    height: 100%;
+    width: 50%;
     left: 50%;
     position: absolute;
 
@@ -17,8 +18,6 @@
 
     .home-titles-container {
       height: 50%;
-      left: 0;
-      margin-top: 20vh;
       position: absolute;
       z-index: 1;
 
@@ -40,14 +39,9 @@
       }
 
       .home-main-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
 
-        -webkit-touch-callout: none; /* iOS Safari */
-        -webkit-user-select: none; /* Safari */
-        -khtml-user-select: none; /* Konqueror HTML */
-        -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-        user-select: none;
+        @include noSelect();
 
         @media screen and (max-width: $small) {
           font-size: 1.5rem;
@@ -56,23 +50,42 @@
         @media screen and (max-width: $medium) {
           font-size: 1.75rem;
         }
+
+        @media screen and (max-width: $large) {
+          font-size: 2rem;
+        }
+
+        @media screen and (max-width: $x-large) {
+          font-size: 2.25rem;
+        }
+
+        @media screen and (max-width: $xx-large) {
+          font-size: 2.75rem;
+        }
       }
 
       .home-titles-secondary-group {
         margin-top: auto;
 
         .home-titles-developer {
-          font-size: 2rem;
+          font-size: 2.5rem;
 
-          -webkit-touch-callout: none; /* iOS Safari */
-          -webkit-user-select: none; /* Safari */
-          -khtml-user-select: none; /* Konqueror HTML */
-          -moz-user-select: none; /* Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-          user-select: none;
+          @include noSelect();
 
           @media screen and (max-width: $small) {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
+          }
+
+          @media screen and (max-width: $medium) {
+            font-size: 1.75rem;
+          }
+
+          @media screen and (max-width: $large) {
+            font-size: 2rem;
+          }
+
+          @media screen and (max-width: $x-large) {
+            font-size: 2.25rem;
           }
         }
 
@@ -112,7 +125,10 @@
     .home-profile-picture {
       align-self: flex-end;
       max-height: 100%;
+      transition: all 1s ease;
       z-index: 1;
+
+      @include noSelect();
 
       @media (orientation: portrait) and (max-width: $medium) {
         max-height: none;
@@ -156,12 +172,15 @@
       border-bottom: 30vw solid $theme-yellow;
       box-shadow: $light-shadow;
       height: 0;
+      left: -15vw;
       position: absolute;
+      top: 22.5vh;
       transform: rotate(-70deg);
+      transition: all 1s ease;
       width: 55vw;
       z-index: -1;
 
-      @media (orientation: portrait) {
+      @media (max-width: $medium) and (orientation: portrait) {
         background: $theme-yellow;
         border-bottom: none;
         border-right: none;
@@ -171,30 +190,11 @@
         transform: rotate(0deg);
         width: 25vw;
       }
-
-      @media (max-width: $small) and (orientation: portrait) {
-        left: 25vw;
-      }
-
-      @media (min-width: $medium) and (orientation: landscape) {
-        left: -15vw;
-        top: 25vh;
-      }
     }
   }
 }
 
 // // animations styling
-@media (orientation: landscape) and (min-width: $medium) {
-  .home-container {
-    .home-profile-picture,
-    .home-yellow-trapezoid {
-      opacity: 1;
-      transition: all 1s ease;
-    }
-  }
-}
-
 .home-container.transition-enter {
   .home-profile-picture,
   .home-yellow-trapezoid {
