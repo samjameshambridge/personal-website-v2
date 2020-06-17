@@ -1,3 +1,5 @@
+-- Currently out of date and out of use. --
+
 # [Personal Website](https://www.samjameshambridge.com)
 
 <img src="./src/img/profile-picture.png" width="200">
